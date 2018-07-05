@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="StockManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductCode" />
+          </Key>
+          <Property Name="ProductCode" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ProductFullName" Type="varchar" MaxLength="150" />
+          <Property Name="ManufacturerCode" Type="varchar" MaxLength="50" />
+          <Property Name="SupplierCode" Type="varchar" MaxLength="50" />
+          <Property Name="AlternateProductCodes" Type="varchar" MaxLength="50" />
+          <Property Name="UnitDescription" Type="varchar" MaxLength="100" />
+          <Property Name="PackageInformation" Type="varchar" MaxLength="150" />
+          <Property Name="BarCodeDescription" Type="varchar" MaxLength="50" />
+          <Property Name="WondersoftProductCode" Type="int" />
+          <Property Name="StockType" Type="smallint" />
+          <Property Name="MinimumStockLevel" Type="float" />
+          <Property Name="MaximumStockLevel" Type="float" />
+          <Property Name="Classification" Type="int" />
+          <Property Name="ProductType" Type="int" />
+          <Property Name="ScheduleCode" Type="int" />
+          <Property Name="CategoryCode" Type="varchar" MaxLength="50" />
+          <Property Name="SubCategory" Type="varchar" MaxLength="50" />
+          <Property Name="Remarks" Type="varchar" MaxLength="100" />
+          <Property Name="PurchasePrice" Type="float" />
+          <Property Name="PurchaseUnit" Type="float" />
+          <Property Name="PurchaseTaxCode" Type="int" />
+          <Property Name="SalesPrice" Type="float" />
+          <Property Name="SalesUnit" Type="float" />
+          <Property Name="SalesTaxCode" Type="int" />
+          <Property Name="MRP" Type="float" />
+          <Property Name="StandardMargin" Type="float" />
+          <Property Name="CashDiscountEligibility" Type="bit" />
+          <Property Name="FreeScheme" Type="bit" />
+          <Property Name="AllowFractions" Type="bit" />
+          <Property Name="Weight" Type="float" />
+          <Property Name="AutoMinMaxRatio" Type="float" />
+          <Property Name="AllowDirectInward" Type="int" />
+          <Property Name="ProtectedProducts" Type="bit" />
+          <Property Name="BatchandExpiryCompulsory" Type="bit" />
+          <Property Name="UnitBasedBilling" Type="bit" />
+          <Property Name="DoNotCheckStock" Type="bit" />
+          <Property Name="AcceptRate" Type="bit" />
+          <Property Name="PriceLevel" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsBillable" Type="bit" />
+          <Property Name="IsBundle" Type="bit" />
+          <Property Name="RateType" Type="int" />
+          <Property Name="BrandCode" Type="int" />
+          <Property Name="HasStoreSpecificStockLevels" Type="bit" />
+          <Property Name="OrderType" Type="int" />
+          <Property Name="AcceptCost4Service" Type="bit" />
+          <Property Name="PackedDate" Type="datetime" />
+          <Property Name="SubCategoryII" Type="varchar" MaxLength="50" />
+          <Property Name="IsMatrixProduct" Type="bit" />
+          <Property Name="SalePriceComputation" Type="int" />
+          <Property Name="MarkUpDownPercentage" Type="float" />
+          <Property Name="MaximumDiscount" Type="float" />
+          <Property Name="AttributeCount1" Type="int" />
+          <Property Name="AttributeCount2" Type="int" />
+          <Property Name="AttributeCount3" Type="int" />
+          <Property Name="AttributeCount4" Type="int" />
+          <Property Name="AttributeCount5" Type="int" />
+          <Property Name="Packing" Type="int" />
+          <Property Name="TimeSlot" Type="float" />
+          <Property Name="ConsumptionType" Type="int" />
+          <Property Name="DefaultDiscountPercentage" Type="float" />
+          <Property Name="IsWebStoreProduct" Type="bit" />
+          <Property Name="BulkDescription" Type="varchar" MaxLength="50" />
+          <Property Name="UnitBasedTransfer" Type="bit" />
+          <Property Name="CombinationCode" Type="int" />
+          <Property Name="ProductTypeforProduction" Type="int" />
+          <Property Name="DefaultUnitType" Type="int" />
+          <Property Name="HasProductOrderAttributes" Type="bit" />
+          <Property Name="AgeGroupCode" Type="int" />
+          <Property Name="ColorCode" Type="int" />
+          <Property Name="GenderCode" Type="int" />
+          <Property Name="GarmentTypeCode" Type="int" />
+          <Property Name="SeasonCode" Type="int" />
+          <Property Name="SizeCode" Type="int" />
+          <Property Name="EANCode" Type="varchar" MaxLength="50" />
+          <Property Name="ToonLabelCode" Type="int" />
+          <Property Name="TaxCategoryCode" Type="int" />
+          <Property Name="AssociatedGender" Type="int" />
+          <Property Name="ProductDescription" Type="varchar" MaxLength="300" />
+          <Property Name="IsBatchNumberCompulsory" Type="bit" />
+          <Property Name="CSTwithCForm" Type="int" />
+          <Property Name="CSTwithoutCForm" Type="int" />
+          <Property Name="WarrantyInMonths" Type="int" />
+          <Property Name="WarrantyInDays" Type="int" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ProductGroupCode" Type="int" />
+          <Property Name="AcceptRangeForSerialNumber" Type="bit" />
+          <Property Name="IsGiftVoucherProduct" Type="int" />
+          <Property Name="GVTypeCode" Type="int" />
+          <Property Name="GVDenominationCode" Type="int" />
+          <Property Name="IsMultiBatch" Type="bit" />
+          <Property Name="WebSalesPrice" Type="float" />
+          <Property Name="WebSalesTaxCode" Type="int" />
+          <Property Name="AdvanceNoticeHours" Type="int" />
+          <Property Name="RecipeCode" Type="int" />
+          <Property Name="HasMultipleUnits" Type="bit" />
+          <Property Name="BaseUnitCode" Type="int" />
+          <Property Name="DefaultUnitCodeInBill" Type="int" />
+          <Property Name="Percentage4GV" Type="float" />
+          <Property Name="Amount4GV" Type="float" />
+          <Property Name="SupplierRefCode" Type="varchar" MaxLength="15" />
+          <Property Name="DisplayOrder" Type="int" />
+          <Property Name="DailyStockEntry" Type="bit" />
+          <Property Name="IndentProductGroupCode" Type="int" />
+          <Property Name="ModifierApplicable" Type="int" />
+          <Property Name="ModifierType" Type="int" />
+          <Property Name="AcceptZeroRate" Type="int" />
+          <Property Name="ExciseDutyCode" Type="int" />
+          <Property Name="ChapterNumber" Type="varchar" MaxLength="50" />
+          <Property Name="CombinedString" Type="varchar" MaxLength="150" />
+          <Property Name="IngredientCode1" Type="int" />
+          <Property Name="Strength1" Type="varchar" MaxLength="50" />
+          <Property Name="IngredientCode2" Type="int" />
+          <Property Name="Strength2" Type="varchar" MaxLength="50" />
+          <Property Name="IngredientCode3" Type="int" />
+          <Property Name="Strength3" Type="varchar" MaxLength="50" />
+          <Property Name="IngredientCode4" Type="int" />
+          <Property Name="Strength4" Type="varchar" MaxLength="50" />
+          <Property Name="IngredientCode5" Type="int" />
+          <Property Name="Strength5" Type="varchar" MaxLength="50" />
+          <Property Name="AcceptWMQty" Type="int" />
+          <Property Name="IsSingleBatch" Type="bit" />
+          <Property Name="MinimumCOQuantity" Type="float" />
+          <Property Name="AdditionalCharges" Type="float" />
+          <Property Name="ScheduleTypeCode" Type="int" />
+          <Property Name="BarcodeDesign" Type="varchar" MaxLength="50" />
+          <Property Name="PriceType" Type="int" />
+          <Property Name="LifeTime" Type="int" />
+          <Property Name="SingleBatchBasedOnRate" Type="int" />
+          <Property Name="MonthEndStockEntry" Type="bit" />
+          <Property Name="Volume" Type="float" />
+          <Property Name="MeasurementID" Type="int" />
+          <Property Name="IsSerialNoMandatory" Type="bit" />
+          <Property Name="MinLength4SerialNo" Type="int" />
+          <Property Name="MaxLength4SerialNo" Type="int" />
+          <Property Name="DerivedProductCode" Type="int" />
+          <Property Name="DoNotChkCostInBill" Type="bit" />
+          <Property Name="UnitDescriptionCode" Type="int" />
+          <Property Name="PGCode" Type="int" />
+          <Property Name="HasCustomAttributes" Type="bit" />
+          <Property Name="ForceSelectionForSNo" Type="int" />
+          <Property Name="StockUOM" Type="int" />
+          <Property Name="PriceUOM" Type="int" />
+          <Property Name="DefaultSaleUOM" Type="int" />
+          <Property Name="DefaultPurchaseUOM" Type="int" />
+          <Property Name="ReportingUOM" Type="int" />
+          <Property Name="LastPurchasedUOM" Type="int" />
+          <Property Name="TreatmentCodes" Type="varchar" MaxLength="100" />
+          <Property Name="InsuranceType" Type="int" />
+          <Property Name="InsCoverageGroupCodes" Type="varchar" MaxLength="100" />
+          <Property Name="MultipleUOM" Type="tinyint" />
+          <Property Name="IsParent" Type="bit" />
+          <Property Name="ParentProductCode" Type="int" />
+          <Property Name="AllowInIndent" Type="int" />
+          <Property Name="BusinessSegmentCode" Type="int" />
+          <Property Name="ArticleCode" Type="int" />
+          <Property Name="DivisionCode" Type="int" />
+          <Property Name="MarketingDivisionCode" Type="int" />
+          <Property Name="QuarterSeasonCode" Type="int" />
+          <Property Name="PricePointCode" Type="int" />
+          <Property Name="ProductCategoryCode" Type="int" />
+          <Property Name="SportsCode" Type="int" />
+          <Property Name="BusinessUnitCode" Type="smallint" />
+          <Property Name="CommodityCode" Type="varchar" MaxLength="50" />
+          <Property Name="RedemptionEligibility" Type="bit" />
+          <Property Name="FoodClassification" Type="tinyint" />
+          <Property Name="InventoryNotToBeMaintained" Type="tinyint" />
+          <Property Name="IsCombo" Type="tinyint" />
+          <Property Name="ComboTypeCode" Type="int" />
+          <Property Name="AffectOtherCharge" Type="tinyint" />
+          <Property Name="CommissionPercentage" Type="float" />
+          <Property Name="DefaultIndentUOM" Type="smallint" />
+          <Property Name="BarCodeFromWeighingMachine" Type="int" />
+          <Property Name="AlternateSaleUOM" Type="int" />
+          <Property Name="FreeUOM" Type="int" />
+          <Property Name="IsFIFOBased" Type="bit" />
+          <Property Name="IsTaxInclusive" Type="bit" />
+          <Property Name="IsExtraPrintRequired" Type="bit" />
+          <Property Name="DeliveryTokenType" Type="int" />
+          <Property Name="GenerateBarCode" Type="bit" />
+          <Property Name="AlternateSupplierCodes" Type="varchar" MaxLength="500" />
+          <Property Name="AdditionalCESSAmount" Type="float" />
+          <Property Name="ImageCount" Type="int" />
+          <Property Name="EnlargeImageCount" Type="int" />
+          <Property Name="DealerPrice" Type="float" />
+          <Property Name="InventoryCategoryCode" Type="int" />
+        </EntityType>
+        <EntityContainer Name="StockManagementModelStoreContainer">
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StockManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductCode" />
+          </Key>
+          <Property Name="ProductCode" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductFullName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ManufacturerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SupplierCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AlternateProductCodes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UnitDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PackageInformation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="BarCodeDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WondersoftProductCode" Type="Int32" />
+          <Property Name="StockType" Type="Int16" />
+          <Property Name="MinimumStockLevel" Type="Double" />
+          <Property Name="MaximumStockLevel" Type="Double" />
+          <Property Name="Classification" Type="Int32" />
+          <Property Name="ProductType" Type="Int32" />
+          <Property Name="ScheduleCode" Type="Int32" />
+          <Property Name="CategoryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PurchasePrice" Type="Double" />
+          <Property Name="PurchaseUnit" Type="Double" />
+          <Property Name="PurchaseTaxCode" Type="Int32" />
+          <Property Name="SalesPrice" Type="Double" />
+          <Property Name="SalesUnit" Type="Double" />
+          <Property Name="SalesTaxCode" Type="Int32" />
+          <Property Name="MRP" Type="Double" />
+          <Property Name="StandardMargin" Type="Double" />
+          <Property Name="CashDiscountEligibility" Type="Boolean" />
+          <Property Name="FreeScheme" Type="Boolean" />
+          <Property Name="AllowFractions" Type="Boolean" />
+          <Property Name="Weight" Type="Double" />
+          <Property Name="AutoMinMaxRatio" Type="Double" />
+          <Property Name="AllowDirectInward" Type="Int32" />
+          <Property Name="ProtectedProducts" Type="Boolean" />
+          <Property Name="BatchandExpiryCompulsory" Type="Boolean" />
+          <Property Name="UnitBasedBilling" Type="Boolean" />
+          <Property Name="DoNotCheckStock" Type="Boolean" />
+          <Property Name="AcceptRate" Type="Boolean" />
+          <Property Name="PriceLevel" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsBillable" Type="Boolean" />
+          <Property Name="IsBundle" Type="Boolean" />
+          <Property Name="RateType" Type="Int32" />
+          <Property Name="BrandCode" Type="Int32" />
+          <Property Name="HasStoreSpecificStockLevels" Type="Boolean" />
+          <Property Name="OrderType" Type="Int32" />
+          <Property Name="AcceptCost4Service" Type="Boolean" />
+          <Property Name="PackedDate" Type="DateTime" Precision="3" />
+          <Property Name="SubCategoryII" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsMatrixProduct" Type="Boolean" />
+          <Property Name="SalePriceComputation" Type="Int32" />
+          <Property Name="MarkUpDownPercentage" Type="Double" />
+          <Property Name="MaximumDiscount" Type="Double" />
+          <Property Name="AttributeCount1" Type="Int32" />
+          <Property Name="AttributeCount2" Type="Int32" />
+          <Property Name="AttributeCount3" Type="Int32" />
+          <Property Name="AttributeCount4" Type="Int32" />
+          <Property Name="AttributeCount5" Type="Int32" />
+          <Property Name="Packing" Type="Int32" />
+          <Property Name="TimeSlot" Type="Double" />
+          <Property Name="ConsumptionType" Type="Int32" />
+          <Property Name="DefaultDiscountPercentage" Type="Double" />
+          <Property Name="IsWebStoreProduct" Type="Boolean" />
+          <Property Name="BulkDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UnitBasedTransfer" Type="Boolean" />
+          <Property Name="CombinationCode" Type="Int32" />
+          <Property Name="ProductTypeforProduction" Type="Int32" />
+          <Property Name="DefaultUnitType" Type="Int32" />
+          <Property Name="HasProductOrderAttributes" Type="Boolean" />
+          <Property Name="AgeGroupCode" Type="Int32" />
+          <Property Name="ColorCode" Type="Int32" />
+          <Property Name="GenderCode" Type="Int32" />
+          <Property Name="GarmentTypeCode" Type="Int32" />
+          <Property Name="SeasonCode" Type="Int32" />
+          <Property Name="SizeCode" Type="Int32" />
+          <Property Name="EANCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ToonLabelCode" Type="Int32" />
+          <Property Name="TaxCategoryCode" Type="Int32" />
+          <Property Name="AssociatedGender" Type="Int32" />
+          <Property Name="ProductDescription" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="IsBatchNumberCompulsory" Type="Boolean" />
+          <Property Name="CSTwithCForm" Type="Int32" />
+          <Property Name="CSTwithoutCForm" Type="Int32" />
+          <Property Name="WarrantyInMonths" Type="Int32" />
+          <Property Name="WarrantyInDays" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductGroupCode" Type="Int32" />
+          <Property Name="AcceptRangeForSerialNumber" Type="Boolean" />
+          <Property Name="IsGiftVoucherProduct" Type="Int32" />
+          <Property Name="GVTypeCode" Type="Int32" />
+          <Property Name="GVDenominationCode" Type="Int32" />
+          <Property Name="IsMultiBatch" Type="Boolean" />
+          <Property Name="WebSalesPrice" Type="Double" />
+          <Property Name="WebSalesTaxCode" Type="Int32" />
+          <Property Name="AdvanceNoticeHours" Type="Int32" />
+          <Property Name="RecipeCode" Type="Int32" />
+          <Property Name="HasMultipleUnits" Type="Boolean" />
+          <Property Name="BaseUnitCode" Type="Int32" />
+          <Property Name="DefaultUnitCodeInBill" Type="Int32" />
+          <Property Name="Percentage4GV" Type="Double" />
+          <Property Name="Amount4GV" Type="Double" />
+          <Property Name="SupplierRefCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DisplayOrder" Type="Int32" />
+          <Property Name="DailyStockEntry" Type="Boolean" />
+          <Property Name="IndentProductGroupCode" Type="Int32" />
+          <Property Name="ModifierApplicable" Type="Int32" />
+          <Property Name="ModifierType" Type="Int32" />
+          <Property Name="AcceptZeroRate" Type="Int32" />
+          <Property Name="ExciseDutyCode" Type="Int32" />
+          <Property Name="ChapterNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CombinedString" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="IngredientCode1" Type="Int32" />
+          <Property Name="Strength1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IngredientCode2" Type="Int32" />
+          <Property Name="Strength2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IngredientCode3" Type="Int32" />
+          <Property Name="Strength3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IngredientCode4" Type="Int32" />
+          <Property Name="Strength4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IngredientCode5" Type="Int32" />
+          <Property Name="Strength5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AcceptWMQty" Type="Int32" />
+          <Property Name="IsSingleBatch" Type="Boolean" />
+          <Property Name="MinimumCOQuantity" Type="Double" />
+          <Property Name="AdditionalCharges" Type="Double" />
+          <Property Name="ScheduleTypeCode" Type="Int32" />
+          <Property Name="BarcodeDesign" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PriceType" Type="Int32" />
+          <Property Name="LifeTime" Type="Int32" />
+          <Property Name="SingleBatchBasedOnRate" Type="Int32" />
+          <Property Name="MonthEndStockEntry" Type="Boolean" />
+          <Property Name="Volume" Type="Double" />
+          <Property Name="MeasurementID" Type="Int32" />
+          <Property Name="IsSerialNoMandatory" Type="Boolean" />
+          <Property Name="MinLength4SerialNo" Type="Int32" />
+          <Property Name="MaxLength4SerialNo" Type="Int32" />
+          <Property Name="DerivedProductCode" Type="Int32" />
+          <Property Name="DoNotChkCostInBill" Type="Boolean" />
+          <Property Name="UnitDescriptionCode" Type="Int32" />
+          <Property Name="PGCode" Type="Int32" />
+          <Property Name="HasCustomAttributes" Type="Boolean" />
+          <Property Name="ForceSelectionForSNo" Type="Int32" />
+          <Property Name="StockUOM" Type="Int32" />
+          <Property Name="PriceUOM" Type="Int32" />
+          <Property Name="DefaultSaleUOM" Type="Int32" />
+          <Property Name="DefaultPurchaseUOM" Type="Int32" />
+          <Property Name="ReportingUOM" Type="Int32" />
+          <Property Name="LastPurchasedUOM" Type="Int32" />
+          <Property Name="TreatmentCodes" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="InsuranceType" Type="Int32" />
+          <Property Name="InsCoverageGroupCodes" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MultipleUOM" Type="Byte" />
+          <Property Name="IsParent" Type="Boolean" />
+          <Property Name="ParentProductCode" Type="Int32" />
+          <Property Name="AllowInIndent" Type="Int32" />
+          <Property Name="BusinessSegmentCode" Type="Int32" />
+          <Property Name="ArticleCode" Type="Int32" />
+          <Property Name="DivisionCode" Type="Int32" />
+          <Property Name="MarketingDivisionCode" Type="Int32" />
+          <Property Name="QuarterSeasonCode" Type="Int32" />
+          <Property Name="PricePointCode" Type="Int32" />
+          <Property Name="ProductCategoryCode" Type="Int32" />
+          <Property Name="SportsCode" Type="Int32" />
+          <Property Name="BusinessUnitCode" Type="Int16" />
+          <Property Name="CommodityCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RedemptionEligibility" Type="Boolean" />
+          <Property Name="FoodClassification" Type="Byte" />
+          <Property Name="InventoryNotToBeMaintained" Type="Byte" />
+          <Property Name="IsCombo" Type="Byte" />
+          <Property Name="ComboTypeCode" Type="Int32" />
+          <Property Name="AffectOtherCharge" Type="Byte" />
+          <Property Name="CommissionPercentage" Type="Double" />
+          <Property Name="DefaultIndentUOM" Type="Int16" />
+          <Property Name="BarCodeFromWeighingMachine" Type="Int32" />
+          <Property Name="AlternateSaleUOM" Type="Int32" />
+          <Property Name="FreeUOM" Type="Int32" />
+          <Property Name="IsFIFOBased" Type="Boolean" />
+          <Property Name="IsTaxInclusive" Type="Boolean" />
+          <Property Name="IsExtraPrintRequired" Type="Boolean" />
+          <Property Name="DeliveryTokenType" Type="Int32" />
+          <Property Name="GenerateBarCode" Type="Boolean" />
+          <Property Name="AlternateSupplierCodes" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="AdditionalCESSAmount" Type="Double" />
+          <Property Name="ImageCount" Type="Int32" />
+          <Property Name="EnlargeImageCount" Type="Int32" />
+          <Property Name="DealerPrice" Type="Double" />
+          <Property Name="InventoryCategoryCode" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="StockManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products" EntityType="Self.Product" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StockManagementModelStoreContainer" CdmEntityContainer="StockManagementEntities">
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="StockManagementModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductFullName" ColumnName="ProductFullName" />
+                <ScalarProperty Name="ManufacturerCode" ColumnName="ManufacturerCode" />
+                <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+                <ScalarProperty Name="AlternateProductCodes" ColumnName="AlternateProductCodes" />
+                <ScalarProperty Name="UnitDescription" ColumnName="UnitDescription" />
+                <ScalarProperty Name="PackageInformation" ColumnName="PackageInformation" />
+                <ScalarProperty Name="BarCodeDescription" ColumnName="BarCodeDescription" />
+                <ScalarProperty Name="WondersoftProductCode" ColumnName="WondersoftProductCode" />
+                <ScalarProperty Name="StockType" ColumnName="StockType" />
+                <ScalarProperty Name="MinimumStockLevel" ColumnName="MinimumStockLevel" />
+                <ScalarProperty Name="MaximumStockLevel" ColumnName="MaximumStockLevel" />
+                <ScalarProperty Name="Classification" ColumnName="Classification" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="ScheduleCode" ColumnName="ScheduleCode" />
+                <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+                <ScalarProperty Name="SubCategory" ColumnName="SubCategory" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+                <ScalarProperty Name="PurchaseUnit" ColumnName="PurchaseUnit" />
+                <ScalarProperty Name="PurchaseTaxCode" ColumnName="PurchaseTaxCode" />
+                <ScalarProperty Name="SalesPrice" ColumnName="SalesPrice" />
+                <ScalarProperty Name="SalesUnit" ColumnName="SalesUnit" />
+                <ScalarProperty Name="SalesTaxCode" ColumnName="SalesTaxCode" />
+                <ScalarProperty Name="MRP" ColumnName="MRP" />
+                <ScalarProperty Name="StandardMargin" ColumnName="StandardMargin" />
+                <ScalarProperty Name="CashDiscountEligibility" ColumnName="CashDiscountEligibility" />
+                <ScalarProperty Name="FreeScheme" ColumnName="FreeScheme" />
+                <ScalarProperty Name="AllowFractions" ColumnName="AllowFractions" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="AutoMinMaxRatio" ColumnName="AutoMinMaxRatio" />
+                <ScalarProperty Name="AllowDirectInward" ColumnName="AllowDirectInward" />
+                <ScalarProperty Name="ProtectedProducts" ColumnName="ProtectedProducts" />
+                <ScalarProperty Name="BatchandExpiryCompulsory" ColumnName="BatchandExpiryCompulsory" />
+                <ScalarProperty Name="UnitBasedBilling" ColumnName="UnitBasedBilling" />
+                <ScalarProperty Name="DoNotCheckStock" ColumnName="DoNotCheckStock" />
+                <ScalarProperty Name="AcceptRate" ColumnName="AcceptRate" />
+                <ScalarProperty Name="PriceLevel" ColumnName="PriceLevel" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsBillable" ColumnName="IsBillable" />
+                <ScalarProperty Name="IsBundle" ColumnName="IsBundle" />
+                <ScalarProperty Name="RateType" ColumnName="RateType" />
+                <ScalarProperty Name="BrandCode" ColumnName="BrandCode" />
+                <ScalarProperty Name="HasStoreSpecificStockLevels" ColumnName="HasStoreSpecificStockLevels" />
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+                <ScalarProperty Name="AcceptCost4Service" ColumnName="AcceptCost4Service" />
+                <ScalarProperty Name="PackedDate" ColumnName="PackedDate" />
+                <ScalarProperty Name="SubCategoryII" ColumnName="SubCategoryII" />
+                <ScalarProperty Name="IsMatrixProduct" ColumnName="IsMatrixProduct" />
+                <ScalarProperty Name="SalePriceComputation" ColumnName="SalePriceComputation" />
+                <ScalarProperty Name="MarkUpDownPercentage" ColumnName="MarkUpDownPercentage" />
+                <ScalarProperty Name="MaximumDiscount" ColumnName="MaximumDiscount" />
+                <ScalarProperty Name="AttributeCount1" ColumnName="AttributeCount1" />
+                <ScalarProperty Name="AttributeCount2" ColumnName="AttributeCount2" />
+                <ScalarProperty Name="AttributeCount3" ColumnName="AttributeCount3" />
+                <ScalarProperty Name="AttributeCount4" ColumnName="AttributeCount4" />
+                <ScalarProperty Name="AttributeCount5" ColumnName="AttributeCount5" />
+                <ScalarProperty Name="Packing" ColumnName="Packing" />
+                <ScalarProperty Name="TimeSlot" ColumnName="TimeSlot" />
+                <ScalarProperty Name="ConsumptionType" ColumnName="ConsumptionType" />
+                <ScalarProperty Name="DefaultDiscountPercentage" ColumnName="DefaultDiscountPercentage" />
+                <ScalarProperty Name="IsWebStoreProduct" ColumnName="IsWebStoreProduct" />
+                <ScalarProperty Name="BulkDescription" ColumnName="BulkDescription" />
+                <ScalarProperty Name="UnitBasedTransfer" ColumnName="UnitBasedTransfer" />
+                <ScalarProperty Name="CombinationCode" ColumnName="CombinationCode" />
+                <ScalarProperty Name="ProductTypeforProduction" ColumnName="ProductTypeforProduction" />
+                <ScalarProperty Name="DefaultUnitType" ColumnName="DefaultUnitType" />
+                <ScalarProperty Name="HasProductOrderAttributes" ColumnName="HasProductOrderAttributes" />
+                <ScalarProperty Name="AgeGroupCode" ColumnName="AgeGroupCode" />
+                <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+                <ScalarProperty Name="GenderCode" ColumnName="GenderCode" />
+                <ScalarProperty Name="GarmentTypeCode" ColumnName="GarmentTypeCode" />
+                <ScalarProperty Name="SeasonCode" ColumnName="SeasonCode" />
+                <ScalarProperty Name="SizeCode" ColumnName="SizeCode" />
+                <ScalarProperty Name="EANCode" ColumnName="EANCode" />
+                <ScalarProperty Name="ToonLabelCode" ColumnName="ToonLabelCode" />
+                <ScalarProperty Name="TaxCategoryCode" ColumnName="TaxCategoryCode" />
+                <ScalarProperty Name="AssociatedGender" ColumnName="AssociatedGender" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="IsBatchNumberCompulsory" ColumnName="IsBatchNumberCompulsory" />
+                <ScalarProperty Name="CSTwithCForm" ColumnName="CSTwithCForm" />
+                <ScalarProperty Name="CSTwithoutCForm" ColumnName="CSTwithoutCForm" />
+                <ScalarProperty Name="WarrantyInMonths" ColumnName="WarrantyInMonths" />
+                <ScalarProperty Name="WarrantyInDays" ColumnName="WarrantyInDays" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ProductGroupCode" ColumnName="ProductGroupCode" />
+                <ScalarProperty Name="AcceptRangeForSerialNumber" ColumnName="AcceptRangeForSerialNumber" />
+                <ScalarProperty Name="IsGiftVoucherProduct" ColumnName="IsGiftVoucherProduct" />
+                <ScalarProperty Name="GVTypeCode" ColumnName="GVTypeCode" />
+                <ScalarProperty Name="GVDenominationCode" ColumnName="GVDenominationCode" />
+                <ScalarProperty Name="IsMultiBatch" ColumnName="IsMultiBatch" />
+                <ScalarProperty Name="WebSalesPrice" ColumnName="WebSalesPrice" />
+                <ScalarProperty Name="WebSalesTaxCode" ColumnName="WebSalesTaxCode" />
+                <ScalarProperty Name="AdvanceNoticeHours" ColumnName="AdvanceNoticeHours" />
+                <ScalarProperty Name="RecipeCode" ColumnName="RecipeCode" />
+                <ScalarProperty Name="HasMultipleUnits" ColumnName="HasMultipleUnits" />
+                <ScalarProperty Name="BaseUnitCode" ColumnName="BaseUnitCode" />
+                <ScalarProperty Name="DefaultUnitCodeInBill" ColumnName="DefaultUnitCodeInBill" />
+                <ScalarProperty Name="Percentage4GV" ColumnName="Percentage4GV" />
+                <ScalarProperty Name="Amount4GV" ColumnName="Amount4GV" />
+                <ScalarProperty Name="SupplierRefCode" ColumnName="SupplierRefCode" />
+                <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+                <ScalarProperty Name="DailyStockEntry" ColumnName="DailyStockEntry" />
+                <ScalarProperty Name="IndentProductGroupCode" ColumnName="IndentProductGroupCode" />
+                <ScalarProperty Name="ModifierApplicable" ColumnName="ModifierApplicable" />
+                <ScalarProperty Name="ModifierType" ColumnName="ModifierType" />
+                <ScalarProperty Name="AcceptZeroRate" ColumnName="AcceptZeroRate" />
+                <ScalarProperty Name="ExciseDutyCode" ColumnName="ExciseDutyCode" />
+                <ScalarProperty Name="ChapterNumber" ColumnName="ChapterNumber" />
+                <ScalarProperty Name="CombinedString" ColumnName="CombinedString" />
+                <ScalarProperty Name="IngredientCode1" ColumnName="IngredientCode1" />
+                <ScalarProperty Name="Strength1" ColumnName="Strength1" />
+                <ScalarProperty Name="IngredientCode2" ColumnName="IngredientCode2" />
+                <ScalarProperty Name="Strength2" ColumnName="Strength2" />
+                <ScalarProperty Name="IngredientCode3" ColumnName="IngredientCode3" />
+                <ScalarProperty Name="Strength3" ColumnName="Strength3" />
+                <ScalarProperty Name="IngredientCode4" ColumnName="IngredientCode4" />
+                <ScalarProperty Name="Strength4" ColumnName="Strength4" />
+                <ScalarProperty Name="IngredientCode5" ColumnName="IngredientCode5" />
+                <ScalarProperty Name="Strength5" ColumnName="Strength5" />
+                <ScalarProperty Name="AcceptWMQty" ColumnName="AcceptWMQty" />
+                <ScalarProperty Name="IsSingleBatch" ColumnName="IsSingleBatch" />
+                <ScalarProperty Name="MinimumCOQuantity" ColumnName="MinimumCOQuantity" />
+                <ScalarProperty Name="AdditionalCharges" ColumnName="AdditionalCharges" />
+                <ScalarProperty Name="ScheduleTypeCode" ColumnName="ScheduleTypeCode" />
+                <ScalarProperty Name="BarcodeDesign" ColumnName="BarcodeDesign" />
+                <ScalarProperty Name="PriceType" ColumnName="PriceType" />
+                <ScalarProperty Name="LifeTime" ColumnName="LifeTime" />
+                <ScalarProperty Name="SingleBatchBasedOnRate" ColumnName="SingleBatchBasedOnRate" />
+                <ScalarProperty Name="MonthEndStockEntry" ColumnName="MonthEndStockEntry" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="MeasurementID" ColumnName="MeasurementID" />
+                <ScalarProperty Name="IsSerialNoMandatory" ColumnName="IsSerialNoMandatory" />
+                <ScalarProperty Name="MinLength4SerialNo" ColumnName="MinLength4SerialNo" />
+                <ScalarProperty Name="MaxLength4SerialNo" ColumnName="MaxLength4SerialNo" />
+                <ScalarProperty Name="DerivedProductCode" ColumnName="DerivedProductCode" />
+                <ScalarProperty Name="DoNotChkCostInBill" ColumnName="DoNotChkCostInBill" />
+                <ScalarProperty Name="UnitDescriptionCode" ColumnName="UnitDescriptionCode" />
+                <ScalarProperty Name="PGCode" ColumnName="PGCode" />
+                <ScalarProperty Name="HasCustomAttributes" ColumnName="HasCustomAttributes" />
+                <ScalarProperty Name="ForceSelectionForSNo" ColumnName="ForceSelectionForSNo" />
+                <ScalarProperty Name="StockUOM" ColumnName="StockUOM" />
+                <ScalarProperty Name="PriceUOM" ColumnName="PriceUOM" />
+                <ScalarProperty Name="DefaultSaleUOM" ColumnName="DefaultSaleUOM" />
+                <ScalarProperty Name="DefaultPurchaseUOM" ColumnName="DefaultPurchaseUOM" />
+                <ScalarProperty Name="ReportingUOM" ColumnName="ReportingUOM" />
+                <ScalarProperty Name="LastPurchasedUOM" ColumnName="LastPurchasedUOM" />
+                <ScalarProperty Name="TreatmentCodes" ColumnName="TreatmentCodes" />
+                <ScalarProperty Name="InsuranceType" ColumnName="InsuranceType" />
+                <ScalarProperty Name="InsCoverageGroupCodes" ColumnName="InsCoverageGroupCodes" />
+                <ScalarProperty Name="MultipleUOM" ColumnName="MultipleUOM" />
+                <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+                <ScalarProperty Name="ParentProductCode" ColumnName="ParentProductCode" />
+                <ScalarProperty Name="AllowInIndent" ColumnName="AllowInIndent" />
+                <ScalarProperty Name="BusinessSegmentCode" ColumnName="BusinessSegmentCode" />
+                <ScalarProperty Name="ArticleCode" ColumnName="ArticleCode" />
+                <ScalarProperty Name="DivisionCode" ColumnName="DivisionCode" />
+                <ScalarProperty Name="MarketingDivisionCode" ColumnName="MarketingDivisionCode" />
+                <ScalarProperty Name="QuarterSeasonCode" ColumnName="QuarterSeasonCode" />
+                <ScalarProperty Name="PricePointCode" ColumnName="PricePointCode" />
+                <ScalarProperty Name="ProductCategoryCode" ColumnName="ProductCategoryCode" />
+                <ScalarProperty Name="SportsCode" ColumnName="SportsCode" />
+                <ScalarProperty Name="BusinessUnitCode" ColumnName="BusinessUnitCode" />
+                <ScalarProperty Name="CommodityCode" ColumnName="CommodityCode" />
+                <ScalarProperty Name="RedemptionEligibility" ColumnName="RedemptionEligibility" />
+                <ScalarProperty Name="FoodClassification" ColumnName="FoodClassification" />
+                <ScalarProperty Name="InventoryNotToBeMaintained" ColumnName="InventoryNotToBeMaintained" />
+                <ScalarProperty Name="IsCombo" ColumnName="IsCombo" />
+                <ScalarProperty Name="ComboTypeCode" ColumnName="ComboTypeCode" />
+                <ScalarProperty Name="AffectOtherCharge" ColumnName="AffectOtherCharge" />
+                <ScalarProperty Name="CommissionPercentage" ColumnName="CommissionPercentage" />
+                <ScalarProperty Name="DefaultIndentUOM" ColumnName="DefaultIndentUOM" />
+                <ScalarProperty Name="BarCodeFromWeighingMachine" ColumnName="BarCodeFromWeighingMachine" />
+                <ScalarProperty Name="AlternateSaleUOM" ColumnName="AlternateSaleUOM" />
+                <ScalarProperty Name="FreeUOM" ColumnName="FreeUOM" />
+                <ScalarProperty Name="IsFIFOBased" ColumnName="IsFIFOBased" />
+                <ScalarProperty Name="IsTaxInclusive" ColumnName="IsTaxInclusive" />
+                <ScalarProperty Name="IsExtraPrintRequired" ColumnName="IsExtraPrintRequired" />
+                <ScalarProperty Name="DeliveryTokenType" ColumnName="DeliveryTokenType" />
+                <ScalarProperty Name="GenerateBarCode" ColumnName="GenerateBarCode" />
+                <ScalarProperty Name="AlternateSupplierCodes" ColumnName="AlternateSupplierCodes" />
+                <ScalarProperty Name="AdditionalCESSAmount" ColumnName="AdditionalCESSAmount" />
+                <ScalarProperty Name="ImageCount" ColumnName="ImageCount" />
+                <ScalarProperty Name="EnlargeImageCount" ColumnName="EnlargeImageCount" />
+                <ScalarProperty Name="DealerPrice" ColumnName="DealerPrice" />
+                <ScalarProperty Name="InventoryCategoryCode" ColumnName="InventoryCategoryCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
